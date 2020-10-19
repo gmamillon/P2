@@ -1,7 +1,7 @@
 * {
     margin: 0;
     list-style-type: none;
-    font-family: Raleway;
+    font-family: "Raleway";
 }
 header {
     display: flex;
@@ -29,4 +29,8 @@ li {
 }
 #top {
     font-size: 0.9em;
+}
+i {
+    font-size: 30px;
+    color: #0065FC;
 }
