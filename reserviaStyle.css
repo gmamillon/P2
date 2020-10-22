@@ -11,9 +11,13 @@ header {
 }
 ul {
     display: flex;
+    padding: 0;
 }
 li {
     display: flex;
+}
+em {
+    font-weight: bold;
 }
 #headerMenu {
     justify-content: space-around;
@@ -27,10 +31,61 @@ li {
 #top {
     margin-left: 54px;
 }
-#top {
-    font-size: 0.9em;
+#top h1 {
+    margin-bottom: 12px;
+    
 }
-i {
-    font-size: 30px;
+#top p {
+    margin-bottom: 12px;
+}
+*/
+#infos {
+    display: flex;
+}
+#infos i {
+    font-size: 15px;
+}
+#filters {
+    margin-top: 24px;
+}
+.choice {
+    margin-left: 40px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.choice i {
+    position: absolute;
+    font-size: 20px;
     color: #0065FC;
+}
+.choice p {
+    align-items: center;
+    margin-top: 8px;
+    position: relative;
+    border: 3px #E2E2E2 solid;
+    border-radius: 36px;
+    padding: 9px 16px 9px 58px;
+    bottom: 8px;
+}
+.choice div {
+    position: relative;
+    height: 47px;
+    width: 47px;
+    z-index: 1;
+    background-color: #DEEBFF;
+    border-radius: 50%;
+    left: 47px;
+    bottom: 10px;
+    display: flex;
+    justify-content: center;
+}
+.choice p:hover {
+    background-color: #DEEBFF;
+    border-color: #DEEBFF;
+}
+#filters :first-child {
+    display: flex;
+    font-size: 20px;
+    font-weight: bold;
+    align-items: center;
 }
