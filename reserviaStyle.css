@@ -76,6 +76,7 @@ em {
 }
 #filters {
     display: flex;
+    flex-wrap: wrap;
 }
 #filters li {
     height: 50px;
@@ -136,11 +137,13 @@ em {
     font-size: 20px;
     color: #0065FC;
 }
+form {
+    margin: 25px 0px;
+}
 #search {
     display: flex;
     font-size: 20px;
     align-items: center;
-    margin: 25px 0px;
 }
 #search .fas {
     background-color: #f2f2f2;
@@ -156,6 +159,7 @@ em {
     height: 46px;
     font-size: 20px;
     font-weight: bold;
+    outline: none;
 }
 #search a, #search a:visited {
     text-decoration: none;
@@ -174,8 +178,7 @@ em {
     border-radius: 40px;
     height: 520px;
     width: 680px;
-    padding: 40px 40px 40px 40px;
-    margin: 40px 40px 40px 40px;
+    padding: 40px 30px 40px 30px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -196,12 +199,12 @@ em {
 #host li {
     background-color: white;
     border: 5px white solid;
-    border-radius: 40px;
+    border-radius: 30px;
     overflow: hidden;
-}
+} 
 .heberg img {
-    height: 120px;
     width: 200px;
+    height: 120px;
 }
 .heberg h2 {
     font-size: 15px;
@@ -211,4 +214,41 @@ em {
 }
 .heberg h2, .heberg p, .heberg div {
     margin-left: 20px;
+}
+#mainContent {
+    display: flex;
+    justify-content: space-between;
+    align-content: space-between;
+    margin: 40px 40px;
+    flex-wrap: wrap;
+}
+article {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: #f2f2f2;
+    height: 520px;
+    width: 340px;
+    border-radius: 40px;
+    padding: 40px 30px 40px 30px;
+    margin-left: 40px;
+}
+article ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 400px;
+}
+article li {
+    border: 5px white solid;
+    border-radius: 30px;
+    overflow: hidden;
+    background-color: white;
+}
+.popular {
+    display: flex;
+}
+.popular img {
+    height: 110px;
+    width: 110px;
 }
