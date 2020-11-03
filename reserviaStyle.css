@@ -1,7 +1,19 @@
 *{
     margin: 0;
     list-style-type: none;
-    font-family: "Raleway";
+}
+@font-face {
+    font-family: 'Raleway';
+    src: url('assets/font/Raleway/Raleway-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url('assets/font/Raleway/Raleway-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 header {
     display: flex;
