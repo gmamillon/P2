@@ -15,6 +15,9 @@
     font-weight: normal;
     font-style: normal;
 }
+body {
+    font-family: "Raleway";
+}
 header {
     display: flex;
     margin: 0% 3%; 
@@ -69,6 +72,7 @@ em {
 }
 #infos {
     display: flex;
+    align-items: center;
     margin-top: 50px;
 }
 #infos i {
@@ -186,20 +190,26 @@ form {
 }
 #host {
     background-color: #f2f2f2;
-    border-radius: 40px;
-    min-height: 520px;
-    padding: 40px 30px 40px 30px;
+    border-radius: 25px;
+    height: 640px;
+    width: 55%;
+    margin-right: 5%;
+    padding: 20px 30px 30px 30px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 #host ul {
     display: flex;
-    min-height: 400px;
-    max-width: 720px;
+    height: 75%;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-content: space-around;
+    align-content: space-between;
+}
+#host h1, #host h3 {
+    height: 80px;
+    display: flex;
+    align-items: center;
 }
 .heberg, .heberg:visited {
     color: black;
@@ -209,22 +219,25 @@ form {
 #host li {
     background-color: white;
     border: 5px white solid;
-    border-radius: 30px;
+    border-radius: 25px;
     overflow: hidden;
+    width: 30%;
+    height: 44%;
 } 
 .heberg img {
-    width: 200px;
-    height: 120px;
+    width: 100%;
+    height: 68%;
     object-fit: cover;
 }
 .heberg h2 {
-    font-size: 15px;
+    font-size: 18px;
 }
-.heberg i {
-    font-size: 12px;
-}
-.heberg h2, .heberg p, .heberg div {
+.heberg .description {
+    height: calc(32% - 5px);
     margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 #mainContent {
     display: flex;
@@ -238,67 +251,85 @@ article {
     flex-direction: column;
     justify-content: space-between;
     background-color: #f2f2f2;
-    height: 540px;
-    width: 340px;
-    border-radius: 40px;
-    padding: 40px 30px 30px 30px;
+    height: 640px;
+    width: 30%;
+    border-radius: 25px;
+    padding: 20px 30px 30px 30px;
+}
+article>div {
+    height: 12.5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+article>div i {
+    font-size: 24px;
 }
 article ul {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 470px;
+    height: 87.5%;
 }
 article li {
     border: 5px white solid;
-    border-radius: 30px;
+    border-radius: 25px;
     overflow: hidden;
     background-color: white;
+    display: flex;
+    height: 27%;
+    width: 100%;
 }
 .popular, .popular:visited {
     display: flex;
     color: black;
     text-decoration: none;
+    width: 100%;
 }
 .popular img {
-    height: 125px;
-    width: 125px;
+    width: 150px;
     object-fit: cover;
 }
-.description {
+.popular .description {
     margin: 20px 0px 0px 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
-.description h2 {
-    font-size: 15px;
-    width: 150px;
-}
-.description + div {
-    font-size: 5px;
+.popular .description h2 {
+    font-size: 18px;
+    width: 180px;
 }
 .star {
-    font-size: 12px;
+    font-size: 14px;
+    color: #0065FC;
+}
+
+.star4 i:last-child, .star3 i:last-child {
+    color: #f2f2f2;
+}
+.star3 i:nth-child(4) {
+    color: #f2f2f2;
 }
 #bottom {
     margin: 0% 3%;
 }
 #activities {
-    height: 584px;
+    height: 700px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: start;
+    margin-top: 40px;
 }
 #activities a,#activities a:visited {
     border-radius: 20px;
-    box-shadow: -4px 8px 8px #EEE ;
+    box-shadow: -5px 8px 8px #DDD;
     text-decoration: none;
     color: black;
     overflow: hidden;
-    margin: 15px 15px 15px 0px;
-    width: 300px;
+    margin-bottom: 46px;
+    width: 22%;
 }
 #activities a h2 {
     height: 50px;
@@ -308,22 +339,22 @@ article li {
     padding: 0px 10px;
 }
 #activities a img {
-    height: 200px;
-    width: 300px;
+    height: 240px;
+    width: 100%;
     object-fit: cover;
 }
 #activities a:nth-child(3n+1) img {
-    height: 500px;
+    height: 580px;
 }
 footer {
-    height: 250px;
+    height: 210px;
     background-color: #f2f2f2;
     display: flex;
     justify-content: start;
 }
 footer ul {
     width: 33%;
-    padding-top: 60px;
+    padding-top: 20px;
 }
 footer li {
     padding-left: 10%;
