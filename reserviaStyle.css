@@ -192,8 +192,7 @@ form {
     background-color: #f2f2f2;
     border-radius: 25px;
     height: 640px;
-    width: 55%;
-    margin-right: 5%;
+    width: 60%;
     padding: 20px 30px 30px 30px;
     display: flex;
     flex-direction: column;
@@ -221,6 +220,7 @@ form {
     border: 5px white solid;
     border-radius: 25px;
     overflow: hidden;
+    box-shadow: -5px 5px 6px #aaa;
     width: 30%;
     height: 44%;
 } 
@@ -277,6 +277,7 @@ article li {
     overflow: hidden;
     background-color: white;
     display: flex;
+    box-shadow: -5px 5px 6px #aaa;
     height: 27%;
     width: 100%;
 }
@@ -306,10 +307,10 @@ article li {
 }
 
 .star4 i:last-child, .star3 i:last-child {
-    color: #f2f2f2;
+    color: #DDD;
 }
 .star3 i:nth-child(4) {
-    color: #f2f2f2;
+    color: #DDD;
 }
 #bottom {
     margin: 0% 3%;
@@ -366,4 +367,36 @@ footer li h3 {
 footer li a {
     text-decoration: none;
     color: black;
+}
+@media all and (orientation: portrait) {
+    .star {
+        font-size: 30px;
+    }
+    #mainContent {
+        display: flex;
+        flex-direction: column-reverse;
+        margin: 40px 0px;
+    }
+    article {
+        width: 100%;
+        height: 1280px;
+        border-radius: 0;
+        display: flex;
+        font-size: 36px;
+    }
+    article>div h1, article>div i {
+        font-size: 60px;
+    }
+    article li {
+        height: 30%;
+        border-radius: 50px;
+    }
+    .popular .description h2 {
+        font-size: 45px;
+        width: 450px;
+    }
+    .popular img {
+        width: 300px;
+        object-fit: cover;
+    }
 }
