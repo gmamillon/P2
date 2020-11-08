@@ -20,11 +20,11 @@ body {
 }
 header {
     display: flex;
-    margin: 0% 3%; 
+    margin: 0% 2.5%; 
     justify-content: space-between; 
     height: 97px;
 }
-a.link_menu, a.link_menu:visited {
+a.link_menu, a.link_menu:visited, .signUp, .signup:visited {
     padding: 0 25px;
     height: 97px;
     display: flex;
@@ -32,18 +32,15 @@ a.link_menu, a.link_menu:visited {
     color: #666;
     text-decoration: none;
     border-top: 3px solid transparent;
+    transition: 0.4s linear;
+    transition-property: border-top, color;
 }
-a.link_menu:hover, a.link_menu:focus {
+a.link_menu:hover, a.link_menu:focus, .signUp:hover, .signUp:focus {
     color: #0065FC;
-    border-top: 3px solid #0065FC;
+    border-top-color: #0065FC;
 }
 .signUp, .signup:visited {
-    padding: 0 25px;
-    height: 100px;
-    display: flex;
-    align-items: center;
     color: #0065FC;
-    text-decoration: none;
     font-weight: bold;
 }
 .logo {
@@ -64,16 +61,15 @@ em {
     font-weight: bold;
 }
 #top {
-    margin: 0% 3%;
+    margin: 0% 2.5%;
 }
 #top h1 {
-    margin-bottom: 12px;
-    
+    line-height: 48px;
 }
 #infos {
     display: flex;
     align-items: center;
-    margin-top: 50px;
+    margin-top: 40px;
 }
 #infos i {
     font-size: 12px;
@@ -119,7 +115,7 @@ em {
     height: 51px;
     background-color: #DEEBFF;
     content: "";
-    transition: all 0.7s ease;
+    transition: all 0.6s ease;
     z-index: -1;
     border-radius: 25.5px;
 }
@@ -175,6 +171,7 @@ form {
     font-size: 20px;
     font-weight: bold;
     outline: none;
+    text-indent: 10px;
 }
 #search a, #search a:visited {
     text-decoration: none;
@@ -193,27 +190,17 @@ form {
     border-radius: 25px;
     height: 640px;
     width: 60%;
-    padding: 20px 30px 30px 30px;
+    padding: 10px 28px 10px 28px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 #host ul {
     display: flex;
-    height: 75%;
+    height: 500px;
     flex-wrap: wrap;
     justify-content: space-between;
     align-content: space-between;
-}
-#host h1, #host h3 {
-    height: 80px;
-    display: flex;
-    align-items: center;
-}
-.heberg, .heberg:visited {
-    color: black;
-    text-decoration: none;
-    font-size: 15px;
 }
 #host li {
     background-color: white;
@@ -223,28 +210,56 @@ form {
     box-shadow: -5px 5px 6px #aaa;
     width: 30%;
     height: 44%;
-} 
+    transition: all 0.3s linear;
+}
+#host li:hover {
+    width: 31%;
+}
+#host h2, #host div a {
+    height: 70px;
+    display: flex;
+    align-items: center;
+}
+#host div a, #host div a:visited {
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+}
+.heberg, .heberg:visited {
+    color: black;
+    text-decoration: none;
+    font-size: 15px;
+    transition: color 0.3s linear;
+}
+.heberg:hover {
+    color: #0065FC;
+}
 .heberg img {
     width: 100%;
-    height: 68%;
+    height: 65%;
     object-fit: cover;
 }
-.heberg h2 {
+.heberg span {
     font-size: 18px;
+    font-weight: bold;
 }
 .heberg .description {
-    height: calc(32% - 5px);
+    height: calc(35% - 5px);
     margin-left: 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
+.heberg .description p {
+    font-size: 16px;
+}
 #mainContent {
     display: flex;
     justify-content: space-between;
     align-content: space-between;
-    margin: 40px 3%;
-    flex-wrap: wrap;
+    margin: 40px 2.5%;
+    flex-wrap: nowrap;
 }
 article {
     display: flex;
@@ -254,10 +269,10 @@ article {
     height: 640px;
     width: 30%;
     border-radius: 25px;
-    padding: 20px 30px 30px 30px;
+    padding: 10px 28px 10px 28px;
 }
 article>div {
-    height: 12.5%;
+    height: 70px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -269,7 +284,8 @@ article ul {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 87.5%;
+    height: 550px;
+    padding-bottom: 20px;
 }
 article li {
     border: 5px white solid;
@@ -280,15 +296,24 @@ article li {
     box-shadow: -5px 5px 6px #aaa;
     height: 27%;
     width: 100%;
+    transition: all 0.3s linear;
+}
+article li:hover {
+    height: 28.5%;
 }
 .popular, .popular:visited {
     display: flex;
     color: black;
     text-decoration: none;
     width: 100%;
+    transition: all 0.3s linear;
+}
+.popular:hover {
+    color: #0065FC;
 }
 .popular img {
     width: 150px;
+    height: 100%;
     object-fit: cover;
 }
 .popular .description {
@@ -296,10 +321,11 @@ article li {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    width: 160px;
 }
-.popular .description h2 {
+.popular .description span {
     font-size: 18px;
-    width: 180px;
+    font-weight: bold;
 }
 .star {
     font-size: 14px;
@@ -313,15 +339,15 @@ article li {
     color: #DDD;
 }
 #bottom {
-    margin: 0% 3%;
+    margin: 0% 2.5%;
 }
 #activities {
-    height: 700px;
+    height: 550px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    justify-content: start;
-    margin-top: 40px;
+    justify-content: space-between;
+    margin: 30px 0px 60px 0px;
 }
 #activities a,#activities a:visited {
     border-radius: 20px;
@@ -329,23 +355,28 @@ article li {
     text-decoration: none;
     color: black;
     overflow: hidden;
-    margin-bottom: 46px;
-    width: 22%;
+    width: 23%;
+    transition: all 0.3s linear;
 }
-#activities a h2 {
+#activities a:hover {
+    width: 24%;
+    color: #0065FC;
+}
+#activities a span {
     height: 50px;
     display: flex;
     align-items: center;
-    font-size: 15px;
-    padding: 0px 10px;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 0px 20px;
 }
 #activities a img {
-    height: 240px;
+    height: 200px;
     width: 100%;
     object-fit: cover;
 }
 #activities a:nth-child(3n+1) img {
-    height: 580px;
+    height: 500px;
 }
 footer {
     height: 210px;
@@ -361,12 +392,17 @@ footer li {
     padding-left: 10%;
     line-height: 30px;
 }
-footer li h3 {
+footer li span {
     line-height: 60px;
+    font-weight: bold;
 }
-footer li a {
+footer li a, footer li a:visited {
     text-decoration: none;
     color: black;
+    transition: all 0.3s linear;
+}
+footer li a:hover, footer li a:focus {
+    color: #0065FC;
 }
 @media all and (orientation: portrait) {
     .star {
@@ -375,6 +411,7 @@ footer li a {
     #mainContent {
         display: flex;
         flex-direction: column-reverse;
+        flex-wrap: wrap;
         margin: 40px 0px;
     }
     article {
