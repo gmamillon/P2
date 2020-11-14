@@ -100,7 +100,7 @@ em {
     height: 50px;
     display: flex;
     align-items: center;
-    margin: 10px 40px 10px 0;
+    margin: 15px 40px 15px 0;
     font-weight: bold;
     font-size: 20px;
 }
@@ -163,7 +163,7 @@ form {
     font-size: 20px;
     align-items: center;
 }
-#search .fas {
+#search .fa-map-marker-alt {
     background-color: #f2f2f2;
     height: 50px;
     width: 50px;
@@ -180,7 +180,7 @@ form {
     outline: none;
     text-indent: 10px;
 }
-#search a, #search a:visited {
+#search button {
     text-decoration: none;
     color: white;
     background-color: #0065FC;
@@ -189,8 +189,20 @@ form {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 20px;
     font-weight: bold;
+    border: 1px #0065FC solid;
     border-radius: 0px 16px 16px 0px;
+    transition: all 0.3s linear;
+    position: relative;
+}
+#search button i {
+    position: absolute;
+    color: transparent;
+}
+#search button:hover, #search button:focus {
+    color: #0065FC;
+    background-color: white;
 }
 a img {
     transition: transform 0.3s linear;
@@ -205,7 +217,6 @@ a:hover .images img {
 #host {
     background-color: #f2f2f2;
     border-radius: 25px;
-    height: 640px;
     width: 60%;
     padding: 10px 28px 10px 28px;
     display: flex;
@@ -226,6 +237,7 @@ a:hover .images img {
     overflow: hidden;
     box-shadow: -5px 5px 6px #aaa;
     width: 30%;
+    min-width: 185px;
     height: 44%;
 }
 #host h2, #host div a {
@@ -238,6 +250,10 @@ a:hover .images img {
     font-weight: bold;
     text-decoration: none;
     color: black;
+    transition: all 0.3s linear;
+}
+#host div a:hover, #host div a:focus {
+    color: #0065FC;
 }
 .heberg, .heberg:visited {
     color: black;
@@ -313,7 +329,7 @@ article li {
     display: flex;
     box-shadow: -5px 5px 6px #aaa;
     height: 27%;
-    width: 100%;
+    width: calc(100% - 10px);
 }
 .popular, .popular:visited {
     display: flex;
@@ -422,17 +438,60 @@ footer li a, footer li a:visited {
 footer li a:hover, footer li a:focus {
     color: #0065FC;
 }
-@media all and (orientation: portrait) {
+@media screen and (max-width: 1232px) {
+    #mainContent {
+        margin: 40px 1%;
+    }
+    #host {
+        padding: 10px 15px;
+        width: 62%;
+    }
+    .heberg .description {
+        padding: 6px 0 0 10px ;
+        height: 30%;
+    }
+    .heberg .description div span {
+        font-size: 16px;
+        display: flex;
+    
+    }
+    article {
+        padding: 10px 15px;
+        width: 31%;
+    }
+    .popular .description {
+        margin: 10px 0 5px 10px;
+    }
+    .popular .description span {
+        font-size: 16px;
+    }
+}
+@media screen and (max-width: 1024px) {
+    #host ul {
+        height: 500px;
+    }
+    .heberg .images {
+        height: 58%;
+    }
+    #host li {
+        width: 47%;
+        height: 30%;
+    }
+}
+@media (max-width: 768px) {
+    html {
+        width: 768px;
+    }
     header {
         padding: 30px 0px 0px 0px;
         margin: 0;
         height: unset;
-        width: 110%;
+        width: 768px;
     }
     .logo {
         height: 150px;
         position: absolute;
-        left: 60px;
+        left: 36px;
     }
     .logo a img {
         height: 150px;
@@ -445,10 +504,11 @@ footer li a:hover, footer li a:focus {
     }
     a.link_menu, a.signUp {
         height: 140px;
-        width: 489px;
+        width: 384px;
         border-top: none;
         border-bottom: 10px solid;
-        font-size: 45px;
+        font-size: 36px;
+        padding: 0;
         justify-content: center;
     }
     a.link_menu {
@@ -458,7 +518,7 @@ footer li a:hover, footer li a:focus {
     }
     a.signUp {
         justify-content: flex-end;
-        margin-left: 539px;
+        margin-left: 354px;
         border-bottom-color: transparent;
     }
     a.link_menu:hover, a.link_menu:focus {
@@ -468,38 +528,111 @@ footer li a:hover, footer li a:focus {
         padding-top: 50px;
     }
     #top h1 {
-        font-size: 70px;
-        line-height: 90px;
+        font-size: 50px;
+        line-height: 64px;
     }
     #top p {
-        font-size: 40px;
+        font-size: 36px;
         line-height: 80px;
     }
+    #search .fa-map-marker-alt {
+        height: 100px;
+        width: 100px;
+        font-size: 40px;
+        border-radius: 30px 0px 0px 30px;
+    }
+    .recherche, .recherche:focus {
+        height: 96px;
+        font-size: 36px;
+    }
+    #search button {
+        height: 100px;
+        width: 120px;
+        color: transparent;
+        border-radius: 0px 30px 30px 0px;
+    }
+    #search button:hover {
+        color: transparent;
+    }
+    #search button i {
+        color: white;
+        font-size: 40px;
+        transition: all 0.3s linear;
+    }
+    #search button:hover i {
+        color: #0065FC;
+    }
+    #filters li:first-child {
+        width: 640px;
+        font-size: 40px;
+    }
+    #filters li {
+        height: 90px;
+
+    }
+    #filters li a {
+        border-width: 6px;
+        border-radius: 50px;
+        padding: 0px 30px 0px 120px;
+        font-size: 32px;
+    }
+    #filters li a i {
+        height: 101px;
+        width: 101px;
+        font-size: 40px;
+        line-height: 100px;
+        left: -6px;
+        top: -6px;
+    }
+    #filters li a::before {
+        height: 101px;
+        width: 101px;
+        border-radius: 50px;
+        left: -6px;
+    }
+    #filters li a:hover::before {
+        width: calc(100% + 12px);
+    }
+    .choice {
+        height: 90px;
+    }
+    #infos i {
+        height: 40px;
+        width: 40px;
+        font-size: 24px;
+    }
+    #infos p {
+        font-size: 28px;
+    }
     .star {
-        font-size: 50px;
+        font-size: 36px;
     }
     #mainContent {
         display: flex;
         flex-direction: column-reverse;
         flex-wrap: nowrap;
+        align-items: center;
         width: 100%;
         margin: 0;
     }
     article {
         width: 100%;
-        height: 1560px;
+        height: 1300px;
         border-radius: 0;
         font-size: 36px;
-        padding: 0px 5%;
+        padding: 0;
+        align-items: center;
     }
     article>div {
-        height: 240px;
+        height: 160px;
+        width: 90%;
     }
     article>div h2, article>div i {
-        font-size: 75px;
+        font-size: 50px;
     }
     article ul {
-        height: 1280px;
+        height: 1100px;
+        width: 90%;
         padding-bottom: 60px;
     }
     article li {
@@ -509,32 +642,37 @@ footer li a:hover, footer li a:focus {
         box-shadow: -10px 10px 12px #aaa;
     }
     .popular .description {
-        font-size: 45px;
-        width: 450px;
-        margin: 50px 0px 0px 50px;
+        font-size: 36px;
+        width: 55%;
+        margin: 30px 0px 0px 30px;
     }
     .popular .description span {
-        font-size: 50px;
+        font-size: 40px;
+    }
+    .popular .images {
+        width: 45%;
     }
     .popular img {
-        width: 375px;
+        width: 100%;
         object-fit: cover;
     }
     #host {
         background-color: white;
         width: 100%;
         height: 4800px;
-        padding: 0px 5%;
+        padding: 0;
     }
+    
     #host ul {
         height: 90%;
         width: 100%;
         flex-direction: column;
         justify-content: space-between;
+        align-items: center;
         flex-wrap: nowrap;
     }
     #host li {
-        width: 100%;
+        width: 90%;
         height: 650px;
         border-width: 10px;
         border-radius: 50px;
@@ -547,7 +685,7 @@ footer li a:hover, footer li a:focus {
         height: 210px;
         padding: 30px 0px 20px 40px;
     }
-    .description span {
+    .heberg .description div span {
         font-size: 50px;
         font-weight: bold;
     }
@@ -555,21 +693,24 @@ footer li a:hover, footer li a:focus {
         font-size: 45px;
     }
     #host h2, #host div a {
-        height: 200px;
+        height: 160px;
         display: flex;
         align-items: center;
-        font-size: 75px;
+        font-size: 50px;
+        margin-left: 40px;
     }
     #host div a {
         height: 200px;
-        font-size: 60px;
+        font-size: 50px;
     }
     #bottom {
-        width: 100%;
-        margin: 0px 5% 120px 5%;
+        width: 90%;
+        padding: 0 5%;
+        margin-bottom: 120px;
+        margin: 0;
     }
     #bottom h2 {
-        font-size: 75px;
+        font-size: 60px;
     }
     #activities {
         height: 4440px;
@@ -598,9 +739,9 @@ footer li a:hover, footer li a:focus {
         padding: 0px 40px;
     }
     footer {
-        height: 1600px;
+        height: 1440px;
         width: 100%;
-        padding: 0px 5%;
+        padding: 0;
         flex-direction: column;
     }
     footer ul {
@@ -617,11 +758,11 @@ footer li a:hover, footer li a:focus {
     }
     footer li a, footer li a:visited {
         text-decoration: none;
-        font-size: 50px;
+        font-size: 40px;
         line-height: 100px;
     }
     footer li span {
-        font-size: 60px;
-        line-height: 180px;
+        font-size: 50px;
+        line-height: 150px;
     }
 }
