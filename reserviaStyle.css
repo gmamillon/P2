@@ -1,3 +1,16 @@
+/*
+Feuille de style CSS
+Sommaire : 
+1 : police et propriétés universelles
+2 : header
+3 : haut de la page
+4 : contenu principale (liste d'hebergement et hébergement populaire)
+5 : bas de la page (liste des activités)
+6 : footer
+7 : responsive desktop
+8 : mobile et tablette
+*/
+/* 1 */
 *{
     margin: 0;
     list-style-type: none;
@@ -18,15 +31,56 @@
 body {
     font-family: "Raleway";
 }
+ul {
+    padding: 0;
+}
+em {
+    font-weight: bold;
+}
+.star {                                             /* défini la couleur des étoiles */
+    font-size: 14px;                            
+    color: #0065FC;
+}
+.star4 i:last-child, .star3 i:last-child {
+    color: #DDD;
+}
+.star3 i:nth-child(4) {
+    color: #DDD;
+}
+a .images img {                                     /* défini les propriétés communes des photos des activités et hébergements */
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s linear;
+}
+a .images {
+    overflow: hidden;
+}
+a:hover .images img {
+    transform: scale(1.1);
+}
+/* 2 */
 header {
     display: flex;
-    margin: 0% 2.5%; 
+    padding: 0% 2.5%; 
     justify-content: space-between; 
-    height: 97px;
+    height: 77px;
+    width: 95%;
+    position: fixed;
+    z-index: 1001;
+    background-color: white;
+    box-shadow: 4px 0px 10px #DDD;
 }
-a.link_menu, a.link_menu:visited, .signUp, .signup:visited {
+.logo {
+    display: flex;
+    align-items: center;
+}
+.logo img {
+    height: 75px;
+    width: 100%;
+}
+a.link_menu, a.link_menu:visited, .signUp, .signup:visited {        /* défini l'apparence du menu de navigation */
     padding: 0 25px;
-    height: 97px;
+    height: 77px;
     display: flex;
     align-items: center;
     color: #666;
@@ -43,14 +97,6 @@ a.link_menu:hover, a.link_menu:focus, .signUp:hover, .signUp:focus {
     color: #0065FC;
     font-weight: bold;
 }
-.logo {
-    display: flex;
-    align-items: center;
-}
-.logo img {
-    height: 75px;
-    width: 100%;
-}
 .menu {
     margin: 0; 
     display: flex;
@@ -58,14 +104,10 @@ a.link_menu:hover, a.link_menu:focus, .signUp:hover, .signUp:focus {
 .menu li{
     display: inline-block;
 }
-ul {
-    padding: 0;
-}
-em {
-    font-weight: bold;
-}
+/* 3 */
 #top {
     margin: 0% 2.5%;
+    padding-top: 100px;
 }
 #top h1 {
     line-height: 48px;
@@ -73,92 +115,10 @@ em {
 #top p {
     font-size: 18px;
 }
-#infos {
-    display: flex;
-    align-items: center;
-    margin-top: 40px;
-}
-#infos i {
-    font-size: 12px;
-    height: 20px;
-    width: 20px;
-    color: #0065FC;
-    border: 2px #e2e2e2 solid;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-#infos p {
-    margin-left: 12px;
-}
-#filters {
-    display: flex;
-    flex-wrap: wrap;
-}
-#filters li {
-    height: 50px;
-    display: flex;
-    align-items: center;
-    margin: 15px 40px 15px 0;
-    font-weight: bold;
-    font-size: 20px;
-}
-#filters li a, #filters li a:visited {
-    margin: 0;
-    box-sizing: content-box;
-    border: 3px solid #f2f2f2;
-    border-radius: 25px;
-    text-decoration: none;
-    color: black;
-    position: relative;
-    padding: 0 15px 0 60px;
-    z-index: 1000;
-}
-#filters li a:before {
-    position: absolute;
-    left: -3px;
-    width: 51px;
-    height: 51px;
-    background-color: #DEEBFF;
-    content: "";
-    transition: all 0.6s ease;
-    z-index: -1;
-    border-radius: 25.5px;
-}
-#filters li a:hover:before, #filters li a:focus:before {
-    width: calc(100% + 6px);
-    border-right: 0px;
-}
-
-#filters li a i, #filters li a:visited i {
-    line-height: 50px;
-    height: 51px;
-    width: 51px;
-    border-radius: 50%;
-    text-align: center;
-    background-color: #DEEBFF;
-    position: absolute;
-    top: -3px;
-    left: -3px;
-}
-.choice {
-    display: flex;
-    margin-left: 0px;
-    font-size: 20px;
-    font-weight: bold;
-    border-radius: 36px;
-    align-items: center;
-    height: 45px;
-}
-.choice i {
-    font-size: 20px;
-    color: #0065FC;
-}
 form {
     margin: 25px 0px;
 }
-#search {
+#search {                                           /* apparence de la barre de recherche */
     display: flex;
     font-size: 20px;
     align-items: center;
@@ -204,15 +164,94 @@ form {
     color: #0065FC;
     background-color: white;
 }
-a img {
-    transition: transform 0.3s linear;
+#filters {                                              /* apparence/comportement des filtres de recherche */
+    display: flex;
+    flex-wrap: wrap;
 }
-a:hover .images img {
-    transform: scale(1.1);
+#filters li {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    margin: 15px 40px 15px 0;
+    font-weight: bold;
+    font-size: 20px;
 }
-.images img {
-    width: 100%;
-    height: 100%;
+#filters li a, #filters li a:visited {
+    margin: 0;
+    box-sizing: content-box;
+    border: 3px solid #f2f2f2;
+    border-radius: 25px;
+    text-decoration: none;
+    color: black;
+    position: relative;
+    padding: 0 15px 0 60px;
+    z-index: 1000;
+}
+#filters li a:before {
+    position: absolute;
+    left: -3px;
+    width: 51px;
+    height: 51px;
+    background-color: #DEEBFF;
+    content: "";
+    transition: all 0.6s ease;
+    z-index: -1;
+    border-radius: 25.5px;
+}
+#filters li a:hover:before, #filters li a:focus:before {
+    width: calc(100% + 6px);
+    border-right: 0px;
+}
+#filters li a i, #filters li a:visited i {
+    line-height: 50px;
+    height: 51px;
+    width: 51px;
+    border-radius: 50%;
+    text-align: center;
+    background-color: #DEEBFF;
+    position: absolute;
+    top: -3px;
+    left: -3px;
+}
+.choice {
+    display: flex;
+    margin-left: 0px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 36px;
+    align-items: center;
+    height: 45px;
+}
+.choice i {
+    font-size: 20px;
+    color: #0065FC;
+}
+#infos {
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+}
+#infos i {                                          
+    font-size: 12px;
+    height: 20px;
+    width: 20px;
+    color: #0065FC;
+    border: 2px #e2e2e2 solid;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#infos p {
+    margin-left: 12px;
+}
+/* 4 */
+#mainContent {
+    display: flex;
+    justify-content: space-between;
+    align-content: space-between;
+    margin: 40px 2.5%;
+    flex-wrap: nowrap;
 }
 #host {
     background-color: #f2f2f2;
@@ -264,9 +303,6 @@ a:hover .images img {
 .heberg:hover {
     color: #0065FC;
 }
-.images {
-    overflow: hidden;
-}
 .heberg .images {
     width: 100%;
     height: 65%;
@@ -287,13 +323,6 @@ a:hover .images img {
 }
 .heberg .description p {
     font-size: 16px;
-}
-#mainContent {
-    display: flex;
-    justify-content: space-between;
-    align-content: space-between;
-    margin: 40px 2.5%;
-    flex-wrap: nowrap;
 }
 article {
     display: flex;
@@ -341,7 +370,7 @@ article li {
 .popular:hover {
     color: #0065FC;
 }
-.popular img {
+.popular .images img {
     width: 150px;
     height: 100%;
     object-fit: cover;
@@ -357,17 +386,7 @@ article li {
     font-size: 18px;
     font-weight: bold;
 }
-.star {
-    font-size: 14px;
-    color: #0065FC;
-}
-
-.star4 i:last-child, .star3 i:last-child {
-    color: #DDD;
-}
-.star3 i:nth-child(4) {
-    color: #DDD;
-}
+/* 5 */
 #bottom {
     margin: 0% 2.5%;
 }
@@ -412,6 +431,7 @@ article li {
 #activities a:nth-child(3n+1) .images {
     height: 510px;
 }
+/* 6 */
 footer {
     height: 210px;
     background-color: #f2f2f2;
@@ -438,6 +458,7 @@ footer li a, footer li a:visited {
 footer li a:hover, footer li a:focus {
     color: #0065FC;
 }
+/* 7 */
 @media screen and (max-width: 1232px) {
     #mainContent {
         margin: 40px 1%;
@@ -478,6 +499,7 @@ footer li a:hover, footer li a:focus {
         height: 30%;
     }
 }
+/* 8 */
 @media (max-width: 768px) {
     html {
         width: 768px;
@@ -487,6 +509,7 @@ footer li a:hover, footer li a:focus {
         margin: 0;
         height: unset;
         width: 768px;
+        position: unset;
     }
     .logo {
         height: 150px;
@@ -652,7 +675,7 @@ footer li a:hover, footer li a:focus {
     .popular .images {
         width: 45%;
     }
-    .popular img {
+    .popular .images img {
         width: 100%;
         object-fit: cover;
     }
