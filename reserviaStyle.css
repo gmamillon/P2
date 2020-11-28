@@ -15,7 +15,13 @@ Sommaire :
     margin: 0;
     list-style-type: none;
 }
-@font-face {
+ul {
+    padding: 0;
+}
+em {
+    font-weight: bold;
+}
+    @font-face {                                    /* 1.1 police */
     font-family: 'Raleway';
     src: url('assets/font/Raleway/Raleway-Bold.ttf') format('truetype');
     font-weight: bold;
@@ -31,14 +37,8 @@ Sommaire :
 body {
     font-family: "Raleway";
 }
-ul {
-    padding: 0;
-}
-em {
-    font-weight: bold;
-}
-.star {                                             /* défini la couleur des étoiles */
-    font-size: 14px;                            
+.star {                                             /* 1.2 défini la couleur des étoiles */
+    font-size: 14px;                                
     color: #0065FC;
 }
 .star4 i:last-child, .star3 i:last-child {
@@ -47,7 +47,7 @@ em {
 .star3 i:nth-child(4) {
     color: #DDD;
 }
-a .images img {                                     /* défini les propriétés communes des photos des activités et hébergements */
+a .images img {                                     /* 1.3 défini les propriétés communes des photos des activités et hébergements */
     width: 100%;
     height: 100%;
     transition: transform 0.3s linear;
@@ -70,7 +70,7 @@ header {
     background-color: white;
     box-shadow: 4px 0px 10px #DDD;
 }
-.logo {
+.logo {                                                             /* 2.1 propriétés du logo */
     display: flex;
     align-items: center;
 }
@@ -78,7 +78,7 @@ header {
     height: 75px;
     width: 100%;
 }
-a.link_menu, a.link_menu:visited, .signUp, .signup:visited {        /* défini l'apparence du menu de navigation */
+a.link_menu, a.link_menu:visited, .signUp, .signup:visited {        /* 2.2 affichage/comportement du menu de navigation */
     padding: 0 25px;
     height: 77px;
     display: flex;
@@ -115,10 +115,10 @@ a.link_menu:hover, a.link_menu:focus, .signUp:hover, .signUp:focus {
 #top p {
     font-size: 18px;
 }
-form {
+form {                                              /* 3.1 apparence de la barre de recherche */
     margin: 25px 0px;
 }
-#search {                                           /* apparence de la barre de recherche */
+#search {
     display: flex;
     font-size: 20px;
     align-items: center;
@@ -164,7 +164,7 @@ form {
     color: #0065FC;
     background-color: white;
 }
-#filters {                                              /* apparence/comportement des filtres de recherche */
+#filters {                                              /* 3.2 affichage/comportement des filtres de recherche */
     display: flex;
     flex-wrap: wrap;
 }
@@ -226,7 +226,7 @@ form {
     font-size: 20px;
     color: #0065FC;
 }
-#infos {
+#infos {                                                /* 3.3 petit point infos */
     display: flex;
     align-items: center;
     margin-top: 40px;
@@ -246,14 +246,14 @@ form {
     margin-left: 12px;
 }
 /* 4 */
-#mainContent {
+#mainContent {                                          /* block contenant la section hébergement et l'article */
     display: flex;
     justify-content: space-between;
     align-content: space-between;
     margin: 40px 2.5%;
     flex-wrap: nowrap;
 }
-#host {
+#host {                                                 /* 4.1 section hébergement */
     background-color: #f2f2f2;
     border-radius: 25px;
     width: 60%;
@@ -261,23 +261,6 @@ form {
     display: flex;
     flex-direction: column;
     justify-content: start;
-}
-#host ul {
-    display: flex;
-    height: 500px;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-content: space-between;
-}
-#host li {
-    background-color: white;
-    border: 5px white solid;
-    border-radius: 25px;
-    overflow: hidden;
-    box-shadow: -5px 5px 6px #aaa;
-    width: 30%;
-    min-width: 185px;
-    height: 44%;
 }
 #host h2, #host div a {
     height: 70px;
@@ -293,6 +276,23 @@ form {
 }
 #host div a:hover, #host div a:focus {
     color: #0065FC;
+}
+#host ul {                                              /* 4.1.1 liste d'hébergements */
+    display: flex;
+    height: 500px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+}
+#host li {                                              /* 4.1.2 hébergement */
+    background-color: white;
+    border: 5px white solid;
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: -5px 5px 6px #aaa;
+    width: 30%;
+    min-width: 185px;
+    height: 44%;
 }
 .heberg, .heberg:visited {
     color: black;
@@ -324,7 +324,7 @@ form {
 .heberg .description p {
     font-size: 16px;
 }
-article {
+article {                                               /* 4.2 article hébergements populaires */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -343,14 +343,14 @@ article>div {
 article>div i {
     font-size: 24px;
 }
-article ul {
+article ul {                                            /* 4.2.1 liste hébergements populaires */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 550px;
     padding-bottom: 20px;
 }
-article li {
+article li {                                            /* 4.2.2 hébergements populaires */
     border: 5px white solid;
     border-radius: 25px;
     overflow: hidden;
@@ -387,10 +387,10 @@ article li {
     font-weight: bold;
 }
 /* 5 */
-#bottom {
+#bottom {                                               /* contenu du bas de la page */
     margin: 0% 2.5%;
 }
-#activities {
+#activities {                                           /* 5.1 block conteneur des activités */
     height: 570px;
     display: flex;
     flex-wrap: wrap;
@@ -398,7 +398,7 @@ article li {
     justify-content: space-between;
     margin: 30px 0px 60px 0px;
 }
-#activities a,#activities a:visited {
+#activities a,#activities a:visited {                   /* 5.2 affichage des activités */
     border-radius: 20px;
     box-shadow: -5px 8px 8px #DDD;
     text-decoration: none;
@@ -422,17 +422,17 @@ article li {
     height: 200px;
     width: 100%;
 }
+#activities a:nth-child(3n+1) .images {
+    height: 510px;
+}
 #activities .images img {
     height: 100%;
     width: 100%;
     object-fit: cover;
     transition: transform 0.4s linear;
 }
-#activities a:nth-child(3n+1) .images {
-    height: 510px;
-}
 /* 6 */
-footer {
+footer {                                                /* affichage du footer */
     height: 210px;
     background-color: #f2f2f2;
     display: flex;
@@ -460,7 +460,7 @@ footer li a:hover, footer li a:focus {
 }
 /* 7 */
 @media screen and (max-width: 1232px) {
-    #mainContent {
+    #mainContent {                                      
         margin: 40px 1%;
     }
     #host {
@@ -500,77 +500,81 @@ footer li a:hover, footer li a:focus {
     }
 }
 /* 8 */
-@media (max-width: 768px) {
-    html {
-        width: 768px;
-    }
+@media screen and (max-width: 768px) {
     header {
-        padding: 30px 0px 0px 0px;
+        display: block;
+        position: static;
+        box-shadow: none;
+        padding: 20px 0 0 0;
         margin: 0;
-        height: unset;
-        width: 768px;
-        position: unset;
+        width: 100%;
     }
     .logo {
-        height: 150px;
-        position: absolute;
-        left: 36px;
+        display: block;
+        width: 35%;
+        align-items: center
     }
-    .logo a img {
-        height: 150px;
-        width: 250px;
+    .logo img {
+        height: 50px;
+    }
+    header nav {
+        width: 100%;
     }
     .menu {
-        flex-wrap: wrap-reverse;
-        position: relative;
-
+        width: 100%;
+    }
+    .menu li {
+        width: 50%;
+        font-size: 24px;
+    }
+    .menu li:last-child {
+        width: 0;
     }
     a.link_menu, a.signUp {
-        height: 140px;
-        width: 384px;
         border-top: none;
-        border-bottom: 10px solid;
-        font-size: 36px;
-        padding: 0;
-        justify-content: center;
     }
     a.link_menu {
-        border-bottom-color: #f2f2f2;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        border-bottom: 6px transparent solid;
+        display: flex;
         justify-content: center;
-
     }
     a.signUp {
-        justify-content: flex-end;
-        margin-left: 354px;
-        border-bottom-color: transparent;
+        position: absolute;
+        top: 0;
+        right: 50px;
     }
     a.link_menu:hover, a.link_menu:focus {
         border-bottom-color: #0065FC;
     }
     #top {
-        padding-top: 50px;
+        padding-top: 80px;
+        margin: 0 0 0 20px;
+        width: calc(100% - 20px);
     }
     #top h1 {
-        font-size: 50px;
-        line-height: 64px;
+        font-size: 32px;
+        line-height: 45px;
     }
     #top p {
-        font-size: 36px;
-        line-height: 80px;
+        font-size: 24px;
+        line-height: 60px;
     }
     #search .fa-map-marker-alt {
-        height: 100px;
-        width: 100px;
-        font-size: 40px;
+        height: 80px;
+        width: 80px;
+        font-size: 30px;
         border-radius: 30px 0px 0px 30px;
     }
     .recherche, .recherche:focus {
-        height: 96px;
-        font-size: 36px;
+        height: 76px;
+        font-size: 30px;
     }
     #search button {
-        height: 100px;
-        width: 120px;
+        height: 80px;
+        width: 80px;
         color: transparent;
         border-radius: 0px 30px 30px 0px;
     }
@@ -579,7 +583,7 @@ footer li a:hover, footer li a:focus {
     }
     #search button i {
         color: white;
-        font-size: 40px;
+        font-size: 30px;
         transition: all 0.3s linear;
     }
     #search button:hover i {
@@ -590,34 +594,33 @@ footer li a:hover, footer li a:focus {
         font-size: 40px;
     }
     #filters li {
-        height: 90px;
-
+        height: 80px;
     }
     #filters li a {
-        border-width: 6px;
+        border-width: 4px;
         border-radius: 50px;
         padding: 0px 30px 0px 120px;
         font-size: 32px;
     }
     #filters li a i {
-        height: 101px;
-        width: 101px;
+        height: 81px;
+        width: 81px;
         font-size: 40px;
-        line-height: 100px;
-        left: -6px;
-        top: -6px;
+        line-height: 80px;
+        left: -4px;
+        top: -4px;
     }
     #filters li a::before {
-        height: 101px;
-        width: 101px;
+        height: 81px;
+        width: 81px;
         border-radius: 50px;
-        left: -6px;
+        left: -4px;
     }
     #filters li a:hover::before {
-        width: calc(100% + 12px);
+        width: calc(100% + 8px);
     }
     .choice {
-        height: 90px;
+        height: 74px;
     }
     #infos i {
         height: 40px;
@@ -625,10 +628,11 @@ footer li a:hover, footer li a:focus {
         font-size: 24px;
     }
     #infos p {
-        font-size: 28px;
+        font-size: 24px;
+        line-height: 40px;
     }
     .star {
-        font-size: 36px;
+        font-size: 30px;
     }
     #mainContent {
         display: flex;
@@ -636,25 +640,24 @@ footer li a:hover, footer li a:focus {
         flex-wrap: nowrap;
         align-items: center;
         width: 100%;
-        margin: 0;
+        margin: 20px 0 0 0;
     }
     article {
         width: 100%;
-        height: 1300px;
+        height: 1140px;
         border-radius: 0;
-        font-size: 36px;
         padding: 0;
         align-items: center;
     }
     article>div {
-        height: 160px;
+        height: 140px;
         width: 90%;
     }
     article>div h2, article>div i {
-        font-size: 50px;
+        font-size: 40px;
     }
     article ul {
-        height: 1100px;
+        height: 960px;
         width: 90%;
         padding-bottom: 60px;
     }
@@ -665,12 +668,12 @@ footer li a:hover, footer li a:focus {
         box-shadow: -10px 10px 12px #aaa;
     }
     .popular .description {
-        font-size: 36px;
+        font-size: 30px;
         width: 55%;
-        margin: 30px 0px 0px 30px;
+        margin: 25px 0px 0px 25px;
     }
     .popular .description span {
-        font-size: 40px;
+        font-size: 30px;
     }
     .popular .images {
         width: 45%;
@@ -682,12 +685,11 @@ footer li a:hover, footer li a:focus {
     #host {
         background-color: white;
         width: 100%;
-        height: 4800px;
+        height: 3600px;
         padding: 0;
     }
-    
     #host ul {
-        height: 90%;
+        height: 3320px;
         width: 100%;
         flex-direction: column;
         justify-content: space-between;
@@ -696,35 +698,35 @@ footer li a:hover, footer li a:focus {
     }
     #host li {
         width: 90%;
-        height: 650px;
+        height: 500px;
         border-width: 10px;
         border-radius: 50px;
         box-shadow: -10px 10px 12px #aaa;
     }
     .heberg .images {
-        height: 400px;
+        height: 350px;
     }
     .heberg .description {
-        height: 210px;
-        padding: 30px 0px 20px 40px;
+        height: 120px;
+        padding: 20px 0px 15px 40px;
     }
     .heberg .description div span {
-        font-size: 50px;
+        font-size: 30px;
         font-weight: bold;
     }
     .heberg .description p {
-        font-size: 45px;
+        font-size: 30px;
     }
     #host h2, #host div a {
-        height: 160px;
+        height: 120px;
         display: flex;
         align-items: center;
-        font-size: 50px;
+        font-size: 36px;
         margin-left: 40px;
     }
     #host div a {
-        height: 200px;
-        font-size: 50px;
+        height: 160px;
+        font-size: 30px;
     }
     #bottom {
         width: 90%;
@@ -733,36 +735,36 @@ footer li a:hover, footer li a:focus {
         margin: 0;
     }
     #bottom h2 {
-        font-size: 60px;
+        font-size: 40px;
     }
     #activities {
-        height: 4440px;
+        height: 3000px;
         width: 100%;
         margin-top: 60px;
     }
     #activities a {
         width: 100%;
-        height: 660px;
+        height: 460px;
         border-radius: 50px;
     }
     #activities .images {
-        height: 480px;
+        height: 360px;
     }
     #activities .images img {
         height: 100%;
         width: 100%;
     }
     #activities a:nth-child(3n+1) .images {
-        height: 480px;
+        height: 360px;
     }
     #activities a span {
-        height: 180px;
-        font-size: 60px;
+        height: 100px;
+        font-size: 32px;
         align-items: center;
         padding: 0px 40px;
     }
     footer {
-        height: 1440px;
+        height: auto;
         width: 100%;
         padding: 0;
         flex-direction: column;
@@ -787,5 +789,184 @@ footer li a:hover, footer li a:focus {
     footer li span {
         font-size: 50px;
         line-height: 150px;
+    }
+}
+@media screen and (max-width: 600px) {
+    a.signUp {
+        right: 10px;
+    }
+    .recherche {
+        width: 225px;
+        font-size: 25px;
+    }
+}
+@media screen and (max-width: 450px) {
+    .menu li {
+        font-size: 20px;
+    }
+    #top {
+        margin-left: 5px;
+        width: calc(100% - 5px);
+    }
+    #top h1 {
+        font-size: 25px;
+        line-height: 32px;
+    }
+    #top p {
+        font-size: 20px;
+        line-height: 32px;
+    }
+    #top form {
+        margin: 10px 0;
+    }
+    #search .fa-map-marker-alt {
+        height: 50px;
+        width: 50px;
+        font-size: 25px;
+        border-radius: 20px 0px 0px 20px;
+    }
+    .recherche, .recherche:focus {
+        height: 46px;
+        width: 150px;
+        font-size: 18px;
+        text-indent: 4px;
+    }
+    #search button {
+        height: 50px;
+        width: 50px;
+        border-radius: 0px 20px 20px 0px;
+    }
+    #search button i {
+        font-size: 25px;
+    }
+    #filters li:first-child {
+        font-size: 25px;
+        margin: 0;
+    }
+    #filters li {
+        height: 60px;
+        margin: 5px 0;
+    }
+    #filters li a {
+        border-width: 4px;
+        border-radius: 50px;
+        padding: 0px 20px 0px 75px;
+        font-size: 25px;
+    }
+    #filters li a i {
+        height: 61px;
+        width: 61px;
+        font-size: 25px;
+        line-height: 60px;
+        left: -4px;
+        top: -4px;
+    }
+    #filters li a::before {
+        height: 61px;
+        width: 61px;
+        border-radius: 50px;
+        left: -4px;
+    }
+    #filters li a:hover::before {
+        width: calc(100% + 8px);
+    }
+    .choice {
+        height: 54px;
+    }
+    #infos i {
+        font-size: 18px;
+        height: 30px;
+        width: 30px;
+    }
+    #infos p {
+        margin-left: 5px;
+    }
+    .star {
+        font-size: 18px;
+    }
+    article {
+        height: 700px;
+    }
+    article>div {
+        height: 90px;
+    }
+    article>div h2, article>div i {
+        font-size: 24px;
+    }
+    article ul {
+        height: 600px;
+        padding-bottom: 20px;
+    }
+    article ul li {
+        border-width: 5px;
+        border-radius: 30px;
+    }
+    .popular .images {
+        width: 50%;
+    }
+    .popular .description {
+        margin: 5px 0 0 5px;
+        font-size: 20px;
+    }
+    .popular .description div span {
+        font-size: 20px;
+    }
+    #host {
+        height: auto;
+    }
+    #host h2, #host div a {
+        font-size: 25px;
+        margin-left: 10px;
+    }
+    #host ul {
+        height: 2160px;
+    }
+    #host li {
+        height: 330px;
+        border-width: 5px;
+        border-radius: 30px;
+    }
+    .heberg .images {
+        height: 240px;
+    }
+    .heberg .description {
+        padding: 0 0 10px 10px;
+        height: 80px;
+    }
+    .heberg .description div p, .heberg .description div span {
+        font-size: 20px;
+    }
+    #host div a {
+        height: 120px;
+    }
+    #bottom h2 {
+        font-size: 25px;
+    }
+    #activities {
+        height: 2160px;
+        margin: 30px 0;
+    }
+    #activities a {
+        height: 330px;
+        border-radius: 30px;
+    }
+    #activities a .images {
+        height: 240px;
+    }
+    #activities a span {
+        font-size: 24px;
+        height: 90px;
+        padding: 0 0 0 20px;
+    }
+    #activities a:nth-child(3n+1) .images {
+        height: 240px;
+    }
+    footer li span {
+        font-size: 25px;
+        line-height: 60px;
+    }
+    footer li a {
+        font-size: 25px;
+        line-height: 40px;
     }
 }
