@@ -1,13 +1,11 @@
-@media screen and (max-width: 1024px) {
-    /* 4.1 : hébergements */
-    #host ul {
-        height: 500px;
-    }
-    #host li {
-        width: 47%;
-        height: 30%;
-    }
-    .heberg .images {
-        height: 58%;
-    }
+/* 4.1 : hébergements */
+#host ul {
+    height: 500px;
+}
+#host li {
+    width: 47%;
+    height: 30%;
+}
+.heberg .images {
+    height: 58%;
 }

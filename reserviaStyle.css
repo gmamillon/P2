@@ -25,7 +25,8 @@ Sommaire :
 /*****************************************/
 /******** 4 : contenu principale *********/
 /*****************************************/
-/* 4.0 : block */
+/* 4.0 : block mainContent */
+@import url('assets/css/mainContent.css');
 /* 4.1 : section hébergments */
 @import url('assets/css/section_hebergements.css');
 /* 4.2 article hébergements populaires */
@@ -42,9 +43,9 @@ Sommaire :
 /************ 7 : responsive ****************/
 /********************************************/
 /* 7.1 : max-width = 1232px */
-@import url('assets/css/responsive_1232px.css');
+@import url('assets/css/responsive_1232px.css') screen and (max-width: 1232px);
 /* 7.2 : max-width = 1024px */
-@import url('assets/css/responsive_1024px.css');
+@import url('assets/css/responsive_1024px.css') screen and (max-width: 1024px);
 /********************************************/
 /*********** 8 : affichage mobile ***********/
 /********************************************/

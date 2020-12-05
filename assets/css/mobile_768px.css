@@ -1,12 +1,12 @@
-/* 8.1 : header mobile 768px */
+/* 2 : header mobile 768px */
 @import url('mobile_768px_header.css');
-/* 8.2 : haut de page mobile 768px */
+/* 3 : haut de page mobile 768px */
 @import url('mobile_768px_haut_de_page.css');
-/* 8.3 : section hébergements mobile 768px */
+/* 4.1 : section hébergements mobile 768px */
 @import url('mobile_768px_section_hebergements.css');
-/* 8.4 : article hébergements mobile 768px */
+/* 4.2 : article hébergements mobile 768px */
 @import url('mobile_768px_article_populaires.css');
-/* 8.5 : bas de page mobile 768px */
+/* 5 : bas de page mobile 768px */
 @import url('mobile_768px_bas_de_page.css');
-/* 8.6 : footer mobile 768px */
+/* 6 : footer mobile 768px */
 @import url('mobile_768px_footer.css');
