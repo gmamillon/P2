@@ -1,0 +1,178 @@
+/* 1.2 : étoiles */
+.star {
+    font-size: 18px;
+}
+/* 2.2 : menu de navigation */
+.menu li {
+    font-size: 20px;
+}
+/* 3.0 : block top */
+#top {
+    margin-left: 5px;
+    width: calc(100% - 5px);
+}
+#top h1 {
+    font-size: 25px;
+    line-height: 32px;
+}
+#top p {
+    font-size: 20px;
+    line-height: 32px;
+}
+/* 3.1 barre de recherche */
+#top form {
+    margin: 10px 0;
+}
+#search .fa-map-marker-alt {
+    height: 50px;
+    width: 50px;
+    font-size: 25px;
+    border-radius: 20px 0px 0px 20px;
+}
+.recherche, .recherche:focus {
+    height: 46px;
+    width: 150px;
+    font-size: 18px;
+    text-indent: 4px;
+}
+#search button {
+    height: 50px;
+    width: 50px;
+    border-radius: 0px 20px 20px 0px;
+}
+#search button i {
+    font-size: 25px;
+}
+/* 3.2 flitres de recherche */
+#filters li:first-child {
+    font-size: 25px;
+    margin: 0;
+}
+#filters li {
+    height: 60px;
+    margin: 5px 0;
+}
+#filters li a {
+    border-width: 4px;
+    border-radius: 50px;
+    padding: 0px 20px 0px 75px;
+    font-size: 25px;
+}
+#filters li a i {
+    height: 61px;
+    width: 61px;
+    font-size: 25px;
+    line-height: 60px;
+    left: -4px;
+    top: -4px;
+}
+#filters li a::before {
+    height: 61px;
+    width: 61px;
+    border-radius: 50px;
+    left: -4px;
+}
+#filters li a:hover::before {
+    width: calc(100% + 8px);
+}
+.choice {
+    height: 54px;
+}
+/* 3.3 petit point infos */
+#infos i {
+    font-size: 18px;
+    height: 30px;
+    width: 30px;
+}
+#infos p {
+    margin-left: 5px;
+}
+/* 4.1 : hébergements */
+#host {
+    height: auto;
+}
+#host h2, #host div a {
+    font-size: 25px;
+    margin-left: 10px;
+}
+#host ul {
+    height: 2160px;
+}
+#host li {
+    height: 330px;
+    border-width: 5px;
+    border-radius: 30px;
+}
+.heberg .images {
+    height: 240px;
+}
+.heberg .description {
+    padding: 0 0 10px 10px;
+    height: 80px;
+}
+.heberg .description div p, .heberg .description div span {
+    font-size: 20px;
+}
+#host div a {
+    height: 120px;
+}
+/* 4.2 : hébergements populaires */
+article {
+    height: 700px;
+}
+article>div {
+    height: 90px;
+}
+article>div h2, article>div i {
+    font-size: 24px;
+}
+article ul {
+    height: 600px;
+    padding-bottom: 20px;
+}
+article ul li {
+    border-width: 5px;
+    border-radius: 30px;
+}
+.popular .images {
+    width: 50%;
+}
+.popular .description {
+    margin: 5px 0 0 5px;
+    font-size: 20px;
+}
+.popular .description div span {
+    font-size: 20px;
+}
+/* 5 : bas de la page */
+#bottom h2 {
+    font-size: 25px;
+}
+#activities {
+    height: 2160px;
+    margin: 30px 0;
+}
+#activities a {
+    height: 330px;
+    border-radius: 30px;
+}
+#activities a .images {
+    height: 240px;
+}
+#activities a span {
+    font-size: 24px;
+    height: 90px;
+    padding: 0 0 0 20px;
+}
+#activities a:nth-child(3n+1) .images {
+    height: 240px;
+}
+/* 6 : footer */
+footer li span {
+    font-size: 25px;
+    line-height: 60px;
+}
+footer li a {
+    font-size: 25px;
+    line-height: 40px;
+}
